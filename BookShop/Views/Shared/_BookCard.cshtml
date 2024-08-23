@@ -14,11 +14,11 @@
         
 
         <h5 class="card-title text-white">@Model.title</h5>
-        <h6 class="card-subtitle text-muted mb-2">@Model.author</h6>
+        <h6 class="card-subtitle text-muted mb-2" style="color:white!important">@Model.author</h6>
 
         <p class="card-text text-white" style="overflow-y: auto;">@Model.shortDescritpion</p>
         
-        <a  asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId" class="mt-auto btn btn-primary btn-dark customTextColor ">Buy</a>
+        <a  asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId" class="mt-auto btn btn-dark bg-dark customTextColor ">Buy</a>
         
 
     </div>

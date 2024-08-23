@@ -37,7 +37,7 @@
                     <a asp-controller="Book" asp-action="List" class=" navbarCustomTextColor nav-link" aria-current="false" >Books</a>
                     
                     <vc:genre-menu></vc:genre-menu>
-                    
+                    <a asp-controller="Contact" asp-action="Index" class=" navbarCustomTextColor nav-link" aria-current="false">Contact</a>
                     
 
                     
@@ -61,7 +61,17 @@
             if (elem.href === current) {
                 elem.classList.add("active");
             }
+
+            
+            
         });
+        
+
+        if (current.includes("genre=")) {
+            document.getElementById("navbarDropdown").classList.add("active")
+            console.log(document.getElementById("navbarDropdown"))
+        }
+        
     </script>
     @RenderBody()
 </body>

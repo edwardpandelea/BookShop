@@ -10,12 +10,12 @@
             <div class="col-md-8">
                 <div class="card-body text-white">
                     <h5 class="card-title mt-3 mb-3 text-center">@Model.title</h5>
-                    <h6 class="card-subtitle text-muted mb-3">@Model.author</h6>
+                    <h6 class="card-subtitle text-muted mb-3" style="color:white !important;">@Model.author</h6>
                     <p class="card-text text-justify ">@Model.description</p>
-                    <p class="card-text mb-3"><small class="text-muted">@Model.publisher</small></p>
+                    <p class="card-text mb-3"><small class="text-muted" style="color:white !important;">@Model.publisher</small></p>
                     <div class="row align-items-end">
                         <div class="col">
-                            <table class="table table-dark table-hover w-100 h-100">
+                            <table class="table table-dark table-hover w-100 h-100" style="cursor: default">
                                 <tr class="table-dark">
                                     <td class="table-dark">
                                         Title
@@ -40,12 +40,13 @@
                                         @Model.publishYear
                                     </td>
                                 </tr>
-                                <tr class="table-dark">
+                                <tr class="table-dark" >
+
                                     <td class="table-dark">
                                         Genre
                                     </td>
-                                    <td class="table-dark">
-                                        @Model.genre.genreName
+                                    <td class="table-dark ">
+                                        <a class="link-underline link-underline-opacity-0 text-white " style="" asp-controller="Book" asp-action="List" asp-route-genre="@Model.genre.genreName">@Model.genre.genreName</a>
                                     </td>
                                 </tr>
 
@@ -64,7 +65,7 @@
                         <div class="col-md-8">
                             <h4 class="text-white d-flex justify-content-center mt-5 mb-5 ">@Model.price RON</h4>
 
-                            <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId"  class="btn btn-primary btn-dark customTextColor mt-5 font-weight-bold w-100 bottom-0 align-content-center"><h3 class="d-flex justify-content-center ">Buy</h3></a>
+                            <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId"  class="btn bg-dark btn-dark customTextColor mt-5 font-weight-bold w-100 bottom-0 align-content-center"><h3 class="d-flex justify-content-center ">Buy</h3></a>
                         </div>
                     </div>
 
