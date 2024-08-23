@@ -15,8 +15,9 @@ namespace BookShop.Controllers
 
         public IActionResult Index()
         {
-            BookListViewModel bookListViewModel = new BookListViewModel(_bookRepository.GetAll, "All Books");
-            return View(bookListViewModel);
+            var mostSoldBooks = _bookRepository.MostSoldBooks;
+            var homeViewModel = new HomeViewModel(mostSoldBooks);
+            return View(homeViewModel);
         }
     }
 }

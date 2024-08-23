@@ -1,0 +1,27 @@
+﻿@model Book
+
+<style>
+    .card .btn {
+        z-index: 1;
+    }
+</style>
+
+
+<div class="card bg-dark m-3 " style="width: 17.82rem;">
+    <img src=@Model.imgUrl class="card-img-top p-3" width="80px" height="320px" alt="BookImage">
+    <a asp-controller="Book" asp-action="Details" asp-route-id="@Model.bookId" class="stretched-link"></a>
+    <div class="card-body d-flex flex-column h-100">
+        
+
+        <h5 class="card-title text-white">@Model.title</h5>
+        <h6 class="card-subtitle text-muted mb-2">@Model.author</h6>
+
+        <p class="card-text text-white" style="overflow-y: auto;">@Model.shortDescritpion</p>
+        
+        <a  asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId" class="mt-auto btn btn-primary btn-dark customTextColor ">Buy</a>
+        
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-center text-white">@Model.publisher</div>
+</div>

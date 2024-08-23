@@ -16,7 +16,6 @@
 
 .active {
     color: #ffd300 !important;
-    transform: scale(1.04) !important;
 }
 .scaleOnHover {
     transition: .1s;
@@ -30,6 +29,55 @@
 .customTextColor {
     color: #e0b129 !important;
 }
+
+.carousel-indicators {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-right: 15% !important;
+    margin-bottom: 1rem !important;
+    margin-left: 15% !important;
+    list-style: none !important;
+}
+
+    .carousel-indicators [data-bs-target] {
+        box-sizing: content-box !important;
+        flex: 0 1 auto !important;
+        width: 13px !important;
+        height: 13px !important;
+        padding: 0 !important;
+        margin-right: 3px !important;
+        margin-left: 3px !important;
+        text-indent: -999px !important;
+        cursor: pointer !important;
+        background-color: #E5E5E5 !important;
+        background-clip: padding-box !important;
+        border: 0 !important;
+        border-top: 10px solid transparent !important;
+        border-bottom: 10px solid transparent !important;
+        opacity: 0.5 !important;
+        transition: opacity 0.6s ease !important;
+    }
+
+
+
+    .carousel-indicators .active {
+        opacity: 1 !important;
+    }
+
+.carousel-indicators {
+    justify-content: end !important;
+    margin-right: 3% !important;
+}
+
+    .carousel-indicators button {
+        border-radius: 50% !important;
+    }
 
 
 

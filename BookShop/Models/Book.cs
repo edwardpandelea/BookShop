@@ -15,9 +15,10 @@
         public bool inStock { get; set; }
         public int? publishYear { get; set; }
 
-        public double price { get; set; }
-
+        public decimal price { get; set; }
+        public int GenreId { get; set; }
         public Genre genre { get; set; } = default!;
+        public bool IsMostSoldBook { get; set; }
 
     }
 }

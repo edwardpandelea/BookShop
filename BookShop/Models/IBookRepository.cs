@@ -4,6 +4,6 @@
     {
        public IEnumerable<Book> GetAll { get; }
        public Book? getBookById(int id);
-
+       public IEnumerable<Book> MostSoldBooks { get; }
     }
 }

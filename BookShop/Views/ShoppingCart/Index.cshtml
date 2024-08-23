@@ -1,0 +1,45 @@
+﻿@model ShoppingCartViewModel
+<style>
+    .card .btn {
+        position:relative;
+        z-index: 1;
+    }
+</style>
+<h2 class="text-center m-4 customTextColor font-weight-bold">Shopping Cart</h2>
+<div class="container-fluid bg-dark mt-3 ">
+    <div class="row">
+        <div class="col-8">
+            @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+            {
+                <div class="card w-50 bg-dark text-white m-5 flex-row border-0 ">
+                    <img class="card-img-md-left m-2" src="@line.Book.imgUrl" width="120px" height="180px" alt="BookImage">
+                    <a asp-controller="Book" asp-action="Details" asp-route-id="@line.Book.bookId" class="stretched-link"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@line.Book.title</h5>
+                        <p class="card-text">@line.Book.author</p>
+                        <p class="card-text">@line.Book.price RON</p>
+                        <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-bookId="@line.Book.bookId" class="btn btn-dark bg-dark customTextColor">Remove From Cart</a>
+                    </div>
+                    <div class="card-footer align-content-center border-0">
+                        @line.Amount
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="col-4">
+            <div class="card bg-dark text-white m-5 border-0" style="width: 18rem;">
+                <div class="card-body ">
+                    <h3 class="card-title d-flex justify-content-center mt-4 customTextColor">
+                        Total:
+                    </h3>
+                    <h3 class="d-flex justify-content-center mt-4 customTextColor">@Model.ShoppingCartTotal RON</h4>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
