@@ -1,0 +1,86 @@
+﻿@page
+@model BookShop.Pages.CheckoutPageModel
+
+<style>
+    .form-control:focus {
+        border-color: #565b5e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #565b5e;
+    }
+
+    .form-control {
+        border-color: #373b3e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;
+    }
+</style>
+<form  method="post" role="form">
+    <h3 class="h3 text-white text-center mt-4 customTextColor" style="cursor:default">Just a step away from your book!</h3>
+    <div class="container-sm d-flex justify-content-center w-50 mt-4 customTextColor p-3 bg-dark rounded-3 mb-3" style="border-color: #373b3e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;">
+        <div class="col-8 mt-3">
+            <div class="row g-2 justify-content-center">
+                <div class="col-10 ms-2 ">
+                    <label asp-for="Order.FirstName" class="form-label "></label>
+                    <input asp-for="Order.FirstName" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-10 ms-2">
+                    <label asp-for="Order.LastName" class="form-label"></label>
+                    <input asp-for="Order.LastName" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.LastName" class="text-danger"></span>
+                </div>
+                <div class="col-10 ms-2">
+                    <label asp-for="Order.AddressLine1" class="form-label"></label>
+                    <input asp-for="Order.AddressLine1" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.AddressLine1" class="text-danger"></span>
+                </div>
+                <div class="col-10 ms-2">
+                    <label asp-for="Order.AddressLine2" class="form-label"></label>
+                    <input asp-for="Order.AddressLine2" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.AddressLine2" class="text-danger"></span>
+                </div>
+                <div class="col-5 ms-2">
+                    <label asp-for="Order.City" class="form-label"></label>
+                    <input asp-for="Order.City" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.City" class="text-danger"></span>
+                </div>
+                <div class="col-5">
+                    <label asp-for="Order.Region" class="form-label"></label>
+                    <input asp-for="Order.Region" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.Region" class="text-danger"></span>
+                </div>
+                <div class="col-5 ms-2">
+                    <label asp-for="Order.zipCode" class="form-label"></label>
+                    <input asp-for="Order.zipCode" class="form-control bg-dark border-0 text-white  mt-1 mb-2" />
+                    <span asp-validation-for="Order.zipCode" class="text-danger"></span>
+                </div>
+                <div class="col-5">
+                    <label asp-for="Order.Country" class="form-label"></label>
+                    <input asp-for="Order.Country" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.Country" class="text-danger"></span>
+                </div>
+                <div class="col-10 ms-2">
+                    <label asp-for="Order.Email" class="form-label"></label>
+                    <input asp-for="Order.Email" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.Email" class="text-danger"></span>
+                </div>
+                <div class="col-10 ms-2">
+                    <label asp-for="Order.phoneNumber" class="form-label"></label>
+                    <input asp-for="Order.phoneNumber" class="form-control bg-dark border-0  text-white mt-1 mb-2" />
+                    <span asp-validation-for="Order.phoneNumber" class="text-danger"></span>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="row g-2 mt-3 ">
+                        <div class="ms-4 ">
+                            <input type="submit" value="Complete Order" class="btn btn-dark bg-dark customTextColor p-3" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</form>

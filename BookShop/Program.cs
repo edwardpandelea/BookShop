@@ -15,7 +15,7 @@ builder.Services.AddDbContext<BookShopDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration["ConnectionStrings:BookShopDbContextConnection"]);
 });
-
+builder.Services.AddRazorPages();
 
 
 var app = builder.Build();
@@ -28,6 +28,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 app.MapDefaultControllerRoute();
+app.MapRazorPages();
 DbInitializer.Seed(app);
 
 app.Run();
