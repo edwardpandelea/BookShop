@@ -4,21 +4,26 @@
         position:relative;
         z-index: 1;
     }
+
+    a.disabled{
+        pointer-events: none;
+    }
 </style>
-<h2 class="text-center m-4 customTextColor font-weight-bold">Shopping Cart</h2>
-<div class="container-fluid bg-dark mt-3 ">
-    <div class="row">
+<h2 class="text-center m-4 customTextColor font-weight-bold" style="cursor:default">Shopping Cart</h2>
+<div class="container bg-dark m-3 mx-auto rounded-5" style=" border-color: #373b3e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;">
+    <div class="row ">
         <div class="col-8">
             @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
             {
                 <div class="card w-50 bg-dark text-white m-5 flex-row border-0 ">
                     <img class="card-img-md-left m-2" src="@line.Book.imgUrl" width="120px" height="180px" alt="BookImage">
                     <a asp-controller="Book" asp-action="Details" asp-route-id="@line.Book.bookId" class="stretched-link"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">@line.Book.title</h5>
+                    <div class="card-body" >
+                        <h5 class="card-title" >@line.Book.title</h5>
                         <p class="card-text">@line.Book.author</p>
                         <p class="card-text">@line.Book.price RON</p>
-                        <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-bookId="@line.Book.bookId" class="btn btn-dark bg-dark customTextColor">Remove From Cart</a>
+                        <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-bookId="@line.Book.bookId" class="btn btn-dark bg-dark customTextColor ">Remove From Cart</a>
                     </div>
                     <div class="card-footer align-content-center border-0">
                         @line.Amount
@@ -29,11 +34,23 @@
         </div>
         <div class="col-4">
             <div class="card bg-dark text-white m-5 border-0" style="width: 18rem;">
-                <div class="card-body ">
+                <div class="card-body " style="cursor:default!important">
                     <h3 class="card-title d-flex justify-content-center mt-4 customTextColor">
                         Total:
                     </h3>
                     <h3 class="d-flex justify-content-center mt-4 customTextColor">@Model.ShoppingCartTotal RON</h4>
+                        @if(Model.ShoppingCart.ShoppingCartItems.Count == 0 )
+                        {
+                            <a asp-controller="Order" asp-action="Checkout" class="btn btn-dark bg-dark mt-4 d-flex justify-content-center disabled">
+                                <h5 class="customTextColor text-center m-2">Check Out</h5>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Order" asp-action="Checkout" class="btn btn-dark bg-dark mt-4 d-flex justify-content-center " >
+                                <h5 class="customTextColor text-center m-2">Check Out</h5>
+                            </a>
+                        }
 
                 </div>
             </div>

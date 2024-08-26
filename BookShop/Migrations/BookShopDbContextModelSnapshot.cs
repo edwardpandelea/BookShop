@@ -93,6 +93,92 @@ namespace BookShop.Migrations
                     b.ToTable("Genres");
                 });
 
+            modelBuilder.Entity("BookShop.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
+
+                    b.Property<string>("AddressLine1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressLine2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OrderPlaced")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("OrderTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("phoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("zipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("BookShop.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderDetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderDetailId"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("bookId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderDetailId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("bookId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("BookShop.Models.ShoppingCartItem", b =>
                 {
                     b.Property<int>("ShoppingCartItemId")
@@ -128,6 +214,25 @@ namespace BookShop.Migrations
                     b.Navigation("genre");
                 });
 
+            modelBuilder.Entity("BookShop.Models.OrderDetail", b =>
+                {
+                    b.HasOne("BookShop.Models.Order", "order")
+                        .WithMany("orderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BookShop.Models.Book", "book")
+                        .WithMany()
+                        .HasForeignKey("bookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("book");
+
+                    b.Navigation("order");
+                });
+
             modelBuilder.Entity("BookShop.Models.ShoppingCartItem", b =>
                 {
                     b.HasOne("BookShop.Models.Book", "Book")
@@ -142,6 +247,11 @@ namespace BookShop.Migrations
             modelBuilder.Entity("BookShop.Models.Genre", b =>
                 {
                     b.Navigation("books");
+                });
+
+            modelBuilder.Entity("BookShop.Models.Order", b =>
+                {
+                    b.Navigation("orderDetails");
                 });
 #pragma warning restore 612, 618
         }

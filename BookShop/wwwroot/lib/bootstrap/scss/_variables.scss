@@ -3,7 +3,6 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
 // Color system
 
 // scss-docs-start gray-color-variables
@@ -299,7 +298,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $yellow-300 !default;
+$primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;

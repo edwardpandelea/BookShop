@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
