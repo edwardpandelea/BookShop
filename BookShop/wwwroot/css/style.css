@@ -3,15 +3,11 @@
 
 .navbarCustomTextColor {
     color: #e0b129 !important;
-    -webkit-font-smoothing: subpixel-antialiased;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: .1s;
+   
 }
     .navbarCustomTextColor:hover {
         color: #ffd300 !important;
         
-        transform: translateY(0px) scale(1.04);
     }
 
 .active {

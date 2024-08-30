@@ -48,5 +48,10 @@ namespace BookShop.Controllers
 
             return View(book);
         }
+
+        public IActionResult Search()
+        {
+            return View();
+        }
     }
 }

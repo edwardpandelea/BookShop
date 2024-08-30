@@ -1,0 +1,52 @@
+﻿
+<div class="container me-auto d-flex justify-content-center mt-5">
+    <input type="text" id="txtBookName" class="bg-dark border-0 ps-3 pe-3 me-4 rounded-3 customTextColor" placeholder="Search"/>
+    <button id="searchButton" class="btn btn-dark bg-dark customTextColor">Search</button>
+</div>
+
+
+ <div class="container-fluid" id="divCard">
+   @*  <div class="card w-50 bg-dark text-white m-5 flex-row border-0 d-flex align-items-center">
+        <img class="card-img-md-left ms-4" src="~/Images/1stBook.jpg" width="120px" height="180px" alt="BookImage">
+        <a asp-controller="Book" asp-action="Details" asp-route-id="" class="stretched-link"></a>
+        <div class="card-body ms-5 align-content-center">
+            <h5 class="card-title m-5 ">test title</h5>
+            <p class="card-text m-5 "> Author</p>
+        </div>
+    </div>  *@
+</div> 
+
+
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $("button").click(function () {
+           
+                var searchQuery = $.trim($("#txtBookName").val());
+                $("#divCard").html("");
+                $.ajax({
+                    type: "POST",
+                    url: "/api/Search",
+                    data: "\"" + searchQuery + "\"",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (books) {
+                        
+                        $.each(books, function (i, book) {
+                            $("#divCard").append('<div class="card w-50 bg-dark text-white m-5 flex-row border-0 d-flex align-items-center" >' + '<img class="card-img-md-left ms-4" src="' + book.imgUrl + '" width="120px" height="180px" alt="BookImage"> <a href="/book/details/' + book.bookId +
+                                '"class="stretched-link">  </a> ' + '<div class= "card-body ms-3" >' + ' <h5 class="card-title m-5" >' + book.title + '</h5>' + '<p class= "card-text m-5" >' + book.author + ' </p>'
+                                + ' <a  asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="' + book.bookId
+                                + '</div>' + '</div>'
+                            );
+
+
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                    $("#divCard").append('<h3 class="customTextColor text-center mt-4">No book found! Try another title</h3>');
+                    }
+                });
+           
+        });
+    });
+
+</script>

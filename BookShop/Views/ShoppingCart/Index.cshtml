@@ -13,9 +13,14 @@
 <div class="container bg-dark m-3 mx-auto rounded-5" style=" border-color: #373b3e;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;">
     <div class="row ">
-        <div class="col-8">
+       
+            @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
+            {
+                
+            
             @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
             {
+                <div class="col-8">
                 <div class="card w-50 bg-dark text-white m-5 flex-row border-0 ">
                     <img class="card-img-md-left m-2" src="@line.Book.imgUrl" width="120px" height="180px" alt="BookImage">
                     <a asp-controller="Book" asp-action="Details" asp-route-id="@line.Book.bookId" class="stretched-link"></a>
@@ -29,9 +34,17 @@
                         @line.Amount
                     </div>
                 </div>
+                </div>
+                } 
+            }
+            else
+            {
+                <div class="col-8 d-flex align-items-center justify-content-center">
+                <h3 class="customTextColor ">Your cart is empty! :(</h3>
+                </div>
             }
 
-        </div>
+      
         <div class="col-4">
             <div class="card bg-dark text-white m-5 border-0" style="width: 18rem;">
                 <div class="card-body " style="cursor:default!important">

@@ -30,6 +30,11 @@ namespace BookShop.Models
         {
             return _bookShopDbContext.Books.FirstOrDefault(b => b.bookId == bookId);
         }
+
+        public IEnumerable<Book> searchBooks(string searchQuery)
+        {
+            return _bookShopDbContext.Books.Where(b=>b.title.Contains(searchQuery) || b.author.Contains(searchQuery) || b.genre.genreName.Contains(searchQuery));
+        }
         
     }
 }

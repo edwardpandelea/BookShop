@@ -1,0 +1,69 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    .form-control:focus {
+        border-color: #565b5e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #565b5e;
+    }
+
+    .form-floating > .form-control:focus ~ label {
+        color: #e0b129 !important;
+    }
+
+        .form-floating > .form-control:focus ~ label::after {
+            background-color: transparent;
+        }
+
+    .form-floating > .form-control:not(:placeholder-shown) ~ label {
+        color: #e0b129 !important;
+    }
+
+        .form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+            background-color: transparent;
+            color: #e0b129 !important;
+        }
+
+    .form-floating > .form-control:-webkit-autofill {
+        -webkit-text-fill-color: white;
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 1000px #565b5e inset;
+    }
+
+</style>
+
+<h1 class="customTextColor text-center m-4">@ViewData["Title"]</h1>
+
+<div class="row customTextColor d-flex justify-content-center">
+    <div class="col-md-3">
+        <form id="registerForm" class="bg-dark p-5 rounded-3" style="  border-color: #373b3e;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2 class="text-center">Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3 ">
+                <input asp-for="Input.Email" class="form-control bg-dark border-0 text-white" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label asp-for="Input.Email" >Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="form-control bg-dark border-0 text-white" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label asp-for="Input.Password">Password</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmPassword" class="form-control bg-dark border-0 text-white" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-dark bg-dark customTextColor mt-2">Register</button>
+        </form>
+    </div>
+    
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
