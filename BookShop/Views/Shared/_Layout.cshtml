@@ -56,17 +56,17 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex me-auto">
-                    <a asp-controller="Home" asp-action="Index" class="nav-link navbarCustomTextColor" aria-current="page" >Home</a>
-                    <a asp-controller="Book" asp-action="List" class=" navbarCustomTextColor nav-link" aria-current="false" >Books</a>
+                    <a asp-controller="Home" asp-action="Index" title="Home" class="nav-link navbarCustomTextColor" aria-current="page" >Home</a>
+                    <a asp-controller="Book" asp-action="List" title="Books" class=" navbarCustomTextColor nav-link" aria-current="false" >Books</a>
                     
                     <vc:genre-menu></vc:genre-menu>
-                    <a asp-controller="Contact" asp-action="Index" class=" navbarCustomTextColor nav-link" aria-current="false">Contact</a>
+                    <a asp-controller="Contact" asp-action="Index" title="Contact" class=" navbarCustomTextColor nav-link" aria-current="false">Contact</a>
 
 
                     
                 </div>
                 <div class="navbar-nav">
-                    <a asp-controller="Book" asp-action="Search" id="searchButton" class=" navbarCustomTextColor nav-link d-flex ms-auto me-2" aria-current="false">
+                    <a asp-controller="Book" asp-action="Search" id="searchButton" class=" navbarCustomTextColor nav-link d-flex me-2" title="Search" aria-current="false">
                         Search
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search ms-1" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
