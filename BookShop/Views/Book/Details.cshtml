@@ -19,7 +19,7 @@
                             <table class="table table-dark table-hover w-100 h-100" style="cursor: default">
                                 <tr class="table-dark ">
                                     <td class="table-dark ">
-                                        Title
+                                        Titlu
                                     </td>
                                     <td class="table-dark">
                                         @Model.title
@@ -27,7 +27,7 @@
                                 </tr>
                                 <tr class="table-dark">
                                     <td class="table-dark">
-                                        Author
+                                        Autor
                                     </td>
                                     <td class="table-dark">
                                         @Model.author
@@ -35,7 +35,7 @@
                                 </tr>
                                 <tr class="table-dark">
                                     <td class="table-dark">
-                                        Publish Year
+                                        Anul
                                     </td>
                                     <td class="table-dark">
                                         @Model.publishYear
@@ -44,7 +44,7 @@
                                 <tr class="table-dark" >
 
                                     <td class="table-dark">
-                                        Genre
+                                        Gen
                                     </td>
                                     <td class="table-dark ">
                                         <a class="link-underline link-underline-opacity-0 text-white " style="" asp-controller="Book" asp-action="List" asp-route-genre="@Model.genre.genreName">@Model.genre.genreName</a>
@@ -53,7 +53,7 @@
 
                                 <tr class="table-dark">
                                     <td class="table-dark">
-                                        Publisher
+                                        Editură
                                     </td>
                                     <td class="table-dark">
                                         @Model.publisher
@@ -66,7 +66,7 @@
                         <div class="col-md-8">
                             <h4 class="text-white d-flex justify-content-center mt-5 mb-5 customTextColor" style="cursor:default">@Model.price RON</h4>
 
-                            <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId"  class="btn bg-dark btn-dark customTextColor mt-5 font-weight-bold w-100 bottom-0 align-content-center"><h3 class="d-flex justify-content-center ">Buy</h3></a>
+                            <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-bookId="@Model.bookId"  class="btn bg-dark btn-dark customTextColor mt-5 font-weight-bold w-100 bottom-0 align-content-center"><h3 class="d-flex justify-content-center ">Cumpară</h3></a>
                         </div>
                     </div>
 

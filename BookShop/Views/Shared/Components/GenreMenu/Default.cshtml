@@ -19,7 +19,7 @@
 
 <li class="nav-item dropdown bg-dark">
     <a class="nav-link dropdown navbarCustomTextColor bg-dark" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Genres
+        Genuri
     </a>
     <ul class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
         @foreach (var genre in Model)
@@ -27,7 +27,7 @@
             <li class=""><a class="dropdown-item bg-dark" style="color:#e0b129; transform:none !important;" asp-controller="Book" asp-action="List" asp-route-genre="@genre.genreName">@genre.genreName</a></li>
 
         }
-        <li> <a class="dropdown-item bg-dark customTextColor" asp-controller="Book" asp-action="List"> All Books</a>    </li>
+        <li> <a class="dropdown-item bg-dark customTextColor" asp-controller="Book" asp-action="List">Toate cărțile</a>    </li>
 
     </ul>
 </li>

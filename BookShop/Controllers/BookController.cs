@@ -27,7 +27,7 @@ namespace BookShop.Controllers
             if (string.IsNullOrEmpty(genre))
             {
                 books = _bookRepository.GetAll.OrderBy(b => b.bookId);
-                currentGenre = "All Books";
+                currentGenre = "Toate Cărțile";
             }
             else
             {

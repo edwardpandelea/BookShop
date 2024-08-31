@@ -38,13 +38,13 @@
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #565b5e;}
 </style>
 
-<h1 class ="customTextColor text-center m-4"> @ViewData["Title"]</h1>
+<h1 class ="customTextColor text-center m-4"> Conectare</h1>
 <div class="row customTextColor d-flex justify-content-center">
     <div class="col-md-3">
         <section>
             <form id="account" method="post" class="bg-dark p-5 rounded-3" style="  border-color: #373b3e;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;">
-                <h2 class="text-center">Enter your credentials to log in.</h2>
+                <h2 class="text-center">Introdu datele pentru a te conecta.</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
@@ -54,17 +54,17 @@
                 </div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Password" class="form-control bg-dark border-0 text-white" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
+                    <label asp-for="Input.Password" class="form-label">Parolă</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div class="checkbox mb-3 bg-dark">
                     <label asp-for="Input.RememberMe" class="form-label">
                         <input class="form-check-input bg-dark border-0 me-2" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        Ține-mă minte?
                     </label>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-dark bg-dark customTextColor mt-2 mb-4">Log in</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-dark bg-dark customTextColor mt-2 mb-4">Conectare</button>
                 </div>
               
             </form>

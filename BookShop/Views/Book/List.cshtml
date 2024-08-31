@@ -5,13 +5,13 @@
 
 <h1 class="customTextColor text-center m-3" style="cursor:default">@Model.CurrentGenre</h1>
 
-<div class="row row-cols-1 row-cols-md-6 g-1 w-100">
-        @foreach (var book in Model.Books)
-        {
-
+<div class="row row-cols-1 row-cols-md-6 g-1 w-100 d-flex justify-content-center">
+    @foreach (var book in Model.Books)
+    {
         <partial name="_BookCard" model="book" />
 
-        }
-    </div>
+
+    }
+</div>
 
    

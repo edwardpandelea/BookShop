@@ -11,48 +11,48 @@
     }
 </style>
 <form asp-action="Checkout" method="post" role="form">
-    <h3 class="h3 text-white text-center mt-4 customTextColor" style="cursor:default">Just a step away from your book!</h3>
+    <h3 class="h3 text-white text-center mt-4 customTextColor" style="cursor:default">Cartea ta este la un pas distanță!</h3>
     <div class="container-sm d-flex justify-content-center mt-4 customTextColor p-2 bg-dark rounded-3 mb-3" style="border-color: #373b3e;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #373b3e;">
         <div class="col-8 mt-3 ">
             <div class="row g-2 justify-content-center">
                 <div class="col-10 ms-2 ">
-                    <label asp-for="FirstName" class="form-label "></label>
+                    <label asp-for="FirstName" class="form-label ">Prenume</label>
                     <input asp-for="FirstName" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
                 <div class="col-10 ms-2">
-                    <label asp-for="LastName" class="form-label "></label>
+                    <label asp-for="LastName" class="form-label ">Nume</label>
                     <input asp-for="LastName" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
                 <div class="col-10 ms-2">
-                    <label asp-for="AddressLine1" class="form-label  "></label>
+                    <label asp-for="AddressLine1" class="form-label  "> Adresa 1</label>
                     <input asp-for="AddressLine1" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="AddressLine1" class="text-danger"></span>
                 </div>
                 <div class="col-10 ms-2">
-                    <label asp-for="AddressLine2" class="form-label "></label>
+                    <label asp-for="AddressLine2" class="form-label "> Adresa 2</label>
                     <input asp-for="AddressLine2" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="AddressLine2" class="text-danger"></span>
                 </div>
                 <div class="col-5 ms-2">
-                    <label asp-for="City" class="form-label "></label>
+                    <label asp-for="City" class="form-label ">Oraș</label>
                     <input asp-for="City" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="City" class="text-danger"></span>
                 </div>
                 <div class="col-5">
-                    <label asp-for="Region" class="form-label "></label>
+                    <label asp-for="Region" class="form-label ">Județ</label>
                     <input asp-for="Region" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="Region" class="text-danger"></span>
                 </div>
                 <div class="col-5 ms-2">
-                    <label asp-for="zipCode" class="form-label "></label>
+                    <label asp-for="zipCode" class="form-label "> Cod Poștal</label>
                     <input asp-for="zipCode" class="form-control bg-dark border-0 text-white  mt-1 mb-2" />
                     <span asp-validation-for="zipCode" class="text-danger"></span>
                 </div>
                 <div class="col-5">
-                    <label asp-for="Country" class="form-label "></label>
+                    <label asp-for="Country" class="form-label ">Țară</label>
                     <input asp-for="Country" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
                     <span asp-validation-for="Country" class="text-danger"></span>
                 </div>
@@ -62,14 +62,14 @@
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="col-10 ms-2">
-                    <label asp-for="phoneNumber" class="form-label "></label>
+                    <label asp-for="phoneNumber" class="form-label ">Număr telefon</label>
                     <input asp-for="phoneNumber" class="form-control bg-dark border-0  text-white mt-1 mb-2" />
                     <span asp-validation-for="phoneNumber" class="text-danger"></span>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <div class="row g-2 mt-3 ">
                         <div class="ms-4 ">
-                            <input type="submit" value="Complete Order" class="btn btn-dark bg-dark customTextColor p-3 " />
+                            <input type="submit" value="Trimite comanda" class="btn btn-dark bg-dark customTextColor p-3 " />
                         </div>
                     </div>
                 </div>

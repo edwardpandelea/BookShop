@@ -1,7 +1,7 @@
 ﻿
 <div class="container me-auto d-flex justify-content-center mt-5">
-    <input type="text" id="txtBookName" class="bg-dark border-0 ps-3 pe-3 me-4 rounded-3 customTextColor" placeholder="Search"/>
-    <button id="searchButton" class="btn btn-dark bg-dark customTextColor">Search</button>
+    <input type="text" id="txtBookName" class="bg-dark border-0 ps-3 pe-3 me-4 rounded-3 customTextColor" placeholder="Caută"/>
+    <button id="searchButton" class="btn btn-dark bg-dark customTextColor">Caută</button>
 </div>
 
 
@@ -42,7 +42,7 @@
                         });
                     },
                     error: function (xhr, status, error) {
-                    $("#divCard").append('<h3 class="customTextColor text-center mt-4">No book found! Try another title</h3>');
+                    $("#divCard").append('<h3 class="customTextColor text-center mt-4">Nu a fost gasita nicio carte! Incearca alt titlu, gen sau autor</h3>');
                     }
                 });
            
