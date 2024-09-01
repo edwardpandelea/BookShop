@@ -1,4 +1,6 @@
-﻿@model Order
+﻿@using Microsoft.AspNetCore.Identity
+@model Order
+@inject UserManager<IdentityUser> UserManager
 <style>
     .form-control:focus {
         border-color: #565b5e;
@@ -58,7 +60,7 @@
                 </div>
                 <div class="col-10 ms-2">
                     <label asp-for="Email" class="form-label"></label>
-                    <input asp-for="Email" class="form-control bg-dark border-0 text-white mt-1 mb-2" />
+                    <input asp-for="Email" class="form-control bg-dark border-0 text-white mt-1 mb-2" value="@UserManager.GetUserName(User)" readonly/>
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="col-10 ms-2">
