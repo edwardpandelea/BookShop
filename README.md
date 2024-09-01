@@ -2,7 +2,8 @@
 
 
 ### **Romanian**
-BookShop este o aplicație web concepută ca o platformă de e-commerce pentru cumpărarea și vânzarea de cărți. Acest proiect evidențiază abilitățile mele actuale în dezvoltarea web, utilizând o gamă largă de tehnologii moderne.
+BookShop este o aplicație web de e-commerce care poate fi folosită pentru comercializarea cărților în format fizic, cuprinzând atât partea de front-end, cât și back-end.
+Pentru realizarea acestui proiect, a fost necesară utilizarea celor mai noi tehnologii de dezvoltare web, precum și folosirea unor artificii tehnice cu scopul de a oferi o experiență cât mai sigură și ușoară pe această platformă.
 
 ### Tehnologii Utilizate
 * Backend: Microsoft ASP.NET MVC, folosind predominant C#
@@ -17,7 +18,7 @@ BookShop este o aplicație web concepută ca o platformă de e-commerce pentru c
 * Design Responsiv: Utilizează Bootstrap pentru a asigura o interfață prietenoasă și adaptabilă pe toate dispozitivele.
 * Acest proiect subliniază capacitatea mea de a integra diverse tehnologii pentru a crea o aplicație web funcțională și ușor de utilizat.
 ### **English**
-BookShop is a web application designed as an e-commerce platform for buying and selling books. This project demonstrates my current skill set in web development, utilizing a range of modern technologies.
+BookShop is a web-based e-commerce application designed for selling physical books, encompassing both the front-end and back-end components. The development of this project required the use of the latest web development technologies, along with technical enhancements aimed at providing a secure and user-friendly experience on the platform.
 
 ### Technologies Used
 * Backend: Microsoft ASP.NET MVC, primarily using C#
