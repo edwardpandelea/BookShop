@@ -16,7 +16,8 @@ Pentru realizarea acestui proiect, a fost necesară utilizarea celor mai noi teh
 * Autentificare Utilizatori: Login și înregistrare securizată, cu gestionarea sesiunilor care salvează coșul de cumpărături al utilizatorului în baza de date.
 * Procesarea Comenzilor: Suport complet pentru plasarea și gestionarea comenzilor.
 * Design Responsiv: Utilizează Bootstrap pentru a asigura o interfață prietenoasă și adaptabilă pe toate dispozitivele.
-* Acest proiect subliniază capacitatea mea de a integra diverse tehnologii pentru a crea o aplicație web funcțională și ușor de utilizat.
+  
+Acest proiect subliniază capacitatea mea de a integra diverse tehnologii pentru a crea o aplicație web funcțională și ușor de utilizat.
 ### **English**
 BookShop is a web-based e-commerce application designed for selling physical books, encompassing both the front-end and back-end components. The development of this project required the use of the latest web development technologies, along with technical enhancements aimed at providing a secure and user-friendly experience on the platform.
 
@@ -31,4 +32,5 @@ BookShop is a web-based e-commerce application designed for selling physical boo
 * User Authentication: Secure login and registration, with session management that saves the user's shopping cart in the database.
 * Order Processing: Full support for placing and managing orders.
 * Responsive Design: Utilizes Bootstrap to ensure a responsive and user-friendly interface across devices.
-* This project highlights my ability to integrate various technologies to create a functional and user-friendly web application.
+  
+This project highlights my ability to integrate various technologies to create a functional and user-friendly web application.
